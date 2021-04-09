@@ -14,7 +14,7 @@ library(e1071)
 library(caTools)
 library(caret)
 
-data= read.csv("C:\\Users\\MAHIMA\\Downloads\\default-of-credit-card-clients-dataset\\UCI_Credit_Card.csv",header = TRUE)
+data= read.csv('give path to your dataset folder')
 
 head(data)
 View(data)
@@ -85,7 +85,7 @@ head(prediction1,10)
 table(test_data$default.payment.next.month)
 table(prediction1)
 actual=new_data
-confusionMatrix(prediction1,test_data[,17])####DOUBT(showing error)
+
 accuracy=table(prediction1,test_data[,17])
 accurate=sum(diag(accuracy))/sum(accuracy)# accuracy of the model is 81.71%
 
